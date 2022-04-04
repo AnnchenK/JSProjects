@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/AnnchenK/JSProjects/issues"
   },
-  "homepage": "https://github.com/AnnchenK/JSProjects#readme"
+  "homepage": "https://github.com/AnnchenK/JSProjects#readme",
+  "dependencies": {
+    "chalk": "^5.0.1"
+  }
 }
