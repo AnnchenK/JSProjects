@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "To do list using express and mongodb.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node index.js",
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,11 @@
   },
   "homepage": "https://github.com/AnnchenK/JSProjects#readme",
   "dependencies": {
-    "chalk": "^5.0.1"
+    "chalk": "^4.0.0",
+    "ejs": "^3.1.7",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.5",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.16"
   }
 }
