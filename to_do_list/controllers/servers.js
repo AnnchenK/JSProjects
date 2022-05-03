@@ -12,10 +12,14 @@ export const getAll = async (req, res) => {
     return rows;
 };
 
-export const addTodo = async (rec, res) => {
-    await pool.query(`insert into tasks (name) values ("${rec.name}")`);
+export const addTodo = async (req, res) => {
+    await pool.query(`insert into tasks (name) values ("${req.name}")`);
 };
 
-export const checkTodo = async (rec, res) => {
-    await pool.query(`update tasks set is_done = "${Number(!!rec.completed)}" where id = "${rec.id}";`);
+export const checkTodo = async (req, res) => {
+    await pool.query(`update tasks set is_done = "${Number(!!req.completed)}" where id = "${req.id}";`);
+};
+
+export const deleteTodo = async (req, res) => {
+    await pool.query(`delete from tasks where id = "${req.id}";`);
 };

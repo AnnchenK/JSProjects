@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { getAll, addTodo, checkTodo } from '../controllers/servers.js'
+import { getAll, addTodo, checkTodo, deleteTodo } from '../controllers/servers.js'
 const router = Router();
 
 router.get('/api/server', getAll);
@@ -27,6 +27,11 @@ router.post('/create', async (req, res) => {
 
 router.post('/complete', async (req, res) => {
     await checkTodo(req.body);
+    res.redirect('/');
+});
+
+router.post('/delete', async (req, res) => {
+    await deleteTodo(req.body);
     res.redirect('/');
 });
 
